@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pentru Iulia ❤️</title>
+
+<style>
+body{
+    margin:0;
+    padding:0;
+    font-family:Arial,sans-serif;
+    background:linear-gradient(135deg,#ffd6e7,#fff5f8);
+    text-align:center;
+    overflow:hidden;
+}
+
+.container{
+    margin-top:80px;
+}
+
+h1{
+    color:#e91e63;
+    font-size:55px;
+}
+
+p{
+    font-size:24px;
+    color:#7a1f4b;
+    max-width:700px;
+    margin:auto;
+    line-height:1.7;
+}
+
+.bears{
+    font-size:60px;
+    margin:20px;
+}
+
+.heart{
+    position:absolute;
+    font-size:25px;
+    animation:fall 8s linear infinite;
+}
+
+@keyframes fall{
+    0%{
+        transform:translateY(-100px);
+    }
+    100%{
+        transform:translateY(110vh);
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <div class="bears">🧸💖🧸💖🧸</div>
+
+    <h1>Pentru Iulia ❤️</h1>
+
+    <p>
+        Această pagină este făcută cu multă dragoste.
+        Ești o persoană specială și foarte iubită.
+        Să nu uiți niciodată cât de importantă ești pentru familia ta. 💖
+    </p>
+
+    <div class="bears">💖🧸💖🧸💖</div>
+</div>
+
+<script>
+for(let i=0;i<40;i++){
+    let heart=document.createElement("div");
+    heart.innerHTML="💖";
+    heart.className="heart";
+    heart.style.left=Math.random()*100+"vw";
+    heart.style.animationDuration=(Math.random()*5+5)+"s";
+    heart.style.fontSize=(Math.random()*20+20)+"px";
+    document.body.appendChild(heart);
+}
+</script>
+
+</body>
+</html>
