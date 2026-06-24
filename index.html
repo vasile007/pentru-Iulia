@@ -1,3 +1,5 @@
+
+```html
 <!DOCTYPE html>
 <html lang="ro">
 <head>
@@ -16,7 +18,7 @@ body{
 }
 
 .container{
-    margin-top:80px;
+    margin-top:40px;
 }
 
 h1{
@@ -29,13 +31,101 @@ p{
     color:#7a1f4b;
     max-width:700px;
     margin:auto;
-    line-height:1.7;
+    line-height:1.8;
+    padding:20px;
 }
 
 .bears{
     font-size:60px;
-    margin:20px;
+    margin:15px;
 }
+
+/* STICKMAN */
+
+.stickman{
+    width:140px;
+    height:220px;
+    margin:20px auto;
+    position:relative;
+    animation:bounce 2s infinite;
+}
+
+.head{
+    width:50px;
+    height:50px;
+    border:4px solid #333;
+    border-radius:50%;
+    background:white;
+    margin:auto;
+}
+
+.body-stick{
+    width:5px;
+    height:70px;
+    background:#333;
+    margin:auto;
+}
+
+.arm-left,
+.arm-right{
+    width:50px;
+    height:5px;
+    background:#333;
+    position:absolute;
+    top:85px;
+}
+
+.arm-left{
+    left:20px;
+    transform:rotate(-35deg);
+}
+
+.arm-right{
+    right:20px;
+    transform:rotate(35deg);
+}
+
+.leg-left,
+.leg-right{
+    width:55px;
+    height:5px;
+    background:#333;
+    position:absolute;
+    top:150px;
+}
+
+.leg-left{
+    left:25px;
+    transform:rotate(45deg);
+}
+
+.leg-right{
+    right:25px;
+    transform:rotate(-45deg);
+}
+
+.big-heart{
+    position:absolute;
+    top:45px;
+    left:50%;
+    transform:translateX(-50%);
+    font-size:45px;
+    animation:pulse 1s infinite;
+}
+
+@keyframes pulse{
+    50%{
+        transform:translateX(-50%) scale(1.2);
+    }
+}
+
+@keyframes bounce{
+    50%{
+        transform:translateY(-10px);
+    }
+}
+
+/* HEARTS */
 
 .heart{
     position:absolute;
@@ -57,29 +147,52 @@ p{
 <body>
 
 <div class="container">
+
     <div class="bears">🧸💖🧸💖🧸</div>
 
-    <h1> Iulia ❤️</h1>
+    <div class="stickman">
+        <div class="head"></div>
+        <div class="body-stick"></div>
+
+        <div class="arm-left"></div>
+        <div class="arm-right"></div>
+
+        <div class="leg-left"></div>
+        <div class="leg-right"></div>
+
+        <div class="big-heart">❤️</div>
+    </div>
+
+    <h1>Bună dimineața, Iulia! ☀️❤️</h1>
 
     <p>
- 🌸 Bună dimineața, Iulia! 🌸
+        🌸 Astăzi vrem să îți trimitem un gând frumos și o îmbrățișare mare. 🌸
+        <br><br>
 
-Sperăm să ai o zi frumoasă, plină de zâmbete și bucurii. 💖
+        Sperăm să ai o zi minunată, plină de zâmbete, bucurii și momente frumoase. 💖
 
-Să nu uiți niciodată cât de mult te iubim și cât de specială ești pentru noi. 🧸❤️
+        <br><br>
 
-Cu multă iubire,
+        Să nu uiți niciodată cât de mult te iubim și cât de importantă ești pentru noi. 🧸❤️
 
-🧸💕 Bianca & Vasile 💕🧸
+        <br><br>
 
+        Îți dorim să fii fericită, să zâmbești mult și să ai parte de tot ce este mai frumos. ✨💕
 
+        <br><br>
 
+        Cu multă iubire,
+        <br><br>
+
+        ❤️ Bianca & Vasile ❤️
     </p>
 
     <div class="bears">💖🧸💖🧸💖</div>
+
 </div>
 
 <script>
+
 for(let i=0;i<40;i++){
     let heart=document.createElement("div");
     heart.innerHTML="💖";
@@ -89,7 +202,9 @@ for(let i=0;i<40;i++){
     heart.style.fontSize=(Math.random()*20+20)+"px";
     document.body.appendChild(heart);
 }
+
 </script>
 
 </body>
 </html>
+```
